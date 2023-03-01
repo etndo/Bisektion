@@ -30,7 +30,7 @@
             }
             for (int i = lowBar.Length; i < 30; i++) //Needed amount of empty rectangles for length of 30
             {
-                lowBar = lowBar + "▓";
+                lowBar = lowBar + "░";
             }
             lowBar = Reverse(lowBar); //Reverses it so the filled part extends from the middle
             Console.Write(lowBar);
