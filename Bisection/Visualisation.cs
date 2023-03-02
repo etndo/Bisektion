@@ -16,14 +16,14 @@
             string lowString = low + ""; //Buffer so its all alligned, 19 == max double string length
             int bufferLength = 19 - lowString.Length; 
 
-            //Bar for the lower val
-            string lowBar = "";
             for (int i = 0; i < bufferLength; i++) //Writes buffer
             {
                 Console.Write(" ");
             }
             Console.Write(low + " ");
 
+            //Bar for the lower val
+            string lowBar = "";
             for (int i = 0; i < lowLength; i++)
             {
                 lowBar += "█";
