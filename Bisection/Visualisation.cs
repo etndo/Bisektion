@@ -20,9 +20,9 @@
             {
                 Console.Write(" ");
             }
-            Console.Write(low + " ");
 
             //Bar for the lower val
+            Console.Write(low + " ");
             string lowBar = "";
             for (int i = 0; i < lowLength; i++)
             {
@@ -48,7 +48,6 @@
                 highBar += "░";
             }
             Console.Write(highBar);
-
             Console.Write( " " + high + "\n");
         }
 
