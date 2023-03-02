@@ -13,7 +13,7 @@ internal class Program
         double low = 0, high = n, middle = 0, lastm = 1;
 
         Console.WriteLine("Berechne Wurzel aus: " + n + "...");
-        setStartVal(high);
+        setStartVal(high); //Value to scale the length of both bars to
         drawBars(low, high); //Visualizes initial input
         while (middle * middle != n /*Dont go on if solved*/ && lastm != middle /*Dont loop forever*/)
         {
