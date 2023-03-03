@@ -3,7 +3,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.Title = "Bisection";
+        Console.Title = "Bisektion";
     Start:
         Console.WriteLine("\n--Neue Rechnung--\n");
 
