@@ -12,31 +12,24 @@ namespace Bisection
 
         public static void drawBars(double low, double high)
         {
-            double highLength = high / startHigh * 30; //Sets length of High bar
-            double lowLength = low / startHigh * 30; //^ Low bar (*30 cause of the bars length of 30)
-            
-            string lowString = low + ""; //Buffer so its all alligned, 19 == max double string length
-            int bufferLength = 19 - lowString.Length; 
-
-            for (int i = 0; i < bufferLength; i++) //Writes buffer
-            {
-                Console.Write(" ");
-            }
+            double highLength = high / startHigh * 30; //Sets length of the bars
+            double lowLength = low / startHigh * 30; //*30 because of the bars length of 30
 
             //Bar for the lower val
-            Console.Write(low + " ");
             string lowBar = "";
             for (int i = 0; i < lowLength; i++)
             {
                 lowBar += "█";
             }
-            for (int i = lowBar.Length; i < 30; i++) //Needed amount of empty rectangles for length of 30
+            for (int i = lowBar.Length; i < 30; i++) //Needed amount of space for length of 30
             {
-                lowBar += "░";
+                lowBar += " ";
             }
             lowBar = Reverse(lowBar); //Reverses it so the filled part extends from the middle
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.Write(lowBar);
-
+            
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("|");
 
             //Bar for the higher val
@@ -45,12 +38,27 @@ namespace Bisection
             {
                 highBar += "█";
             }
-            for (int i = highBar.Length; i < 30; i++) //Needed amount of empty rectangles for length of 30
+            for (int i = highBar.Length; i < 30; i++) //Needed amount of space for length of 30
             {
-                highBar += "░";
+                highBar += " ";
             }
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write(highBar);
-            Console.Write( " " + high + "\n");
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write(" Min.: " + low);
+
+            string lowString = low + ""; //Buffer so its all alligned, 19 == max double string length
+            int bufferLength = 19 - lowString.Length;
+
+            for (int i = 0; i < bufferLength; i++) //Writes buffer
+            {
+                Console.Write(" ");
+            }
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(" Max.: " + high);
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         static string Reverse(string s)
