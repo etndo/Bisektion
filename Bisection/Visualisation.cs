@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace Bisection
+﻿namespace Bisection
 {
     internal class Visualisation
     {

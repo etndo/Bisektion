@@ -11,7 +11,7 @@ internal class Program
     InputNumber: //Gets the number to calculate the square root of
         Console.Write("Wurzel aus: ");
         try { n = Convert.ToDouble(Console.ReadLine()); } catch { Console.WriteLine("Ungültige Eingabe!"); goto InputNumber; }
-        if (n < 0) { Console.WriteLine("Ungültige Eingabe! (Muss größer >0 sein!)"); goto InputNumber; }
+        if (n < 0) { Console.WriteLine("Ungültige Eingabe! (Muss > 0 sein!)"); goto InputNumber; }
         double low = 0, high = n, middle = 0, lastm = 1;
 
         Console.WriteLine("Berechne Wurzel aus: " + n + "...");
